@@ -1,5 +1,6 @@
 package com.example.framework;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -16,3 +17,8 @@ public interface FileIO {
 		
 		public SharedPreferences getSharedPref();
 }
+=======
+public interface FileIO {
+
+}
+>>>>>>> d876ccff9d6218f50196b2be2db1e20227ced138
