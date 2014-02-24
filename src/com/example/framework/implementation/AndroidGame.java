@@ -20,12 +20,12 @@ import com.example.framework.Screen;
 
 public abstract class AndroidGame extends Activity implements Game {
 	AndroidFastRenderView renderView;
-	Grpahics graphics;
+	Graphics graphics;
 	Audio audio;
 	Input input;
 	FileIO fileIO;
 	Screen screen;
-	Wakelock wakelock;
+	WakeLock wakeLock;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -45,7 +45,7 @@ public abstract class AndroidGame extends Activity implements Game {
 		renderView = new AndroidFastRenderView(this, frameBuffer);
 		graphics = new AndroidGraphics(getAssets(), frameBuffer);
 		fileIO = new AndroidFileIO(this);
-		audio = new AndriodAudio(this);
+		audio = new AndroidAudio(this);
 		input = new AndroidInput(this, renderView, scaleX, scaleY);
 		screen = getInitScreen();
 		setContentView(renderView);
